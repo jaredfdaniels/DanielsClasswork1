@@ -7,6 +7,8 @@ public class DanielsOverloadingMethods {
 		System.out.println(num);
 		double numD = doubleNumber(4.5);
 		System.out.println(numD);
+		String numS = doubleNumber("4.5");
+		System.out.println(numS);
 		
 	}
 	
@@ -18,6 +20,12 @@ public class DanielsOverloadingMethods {
 	public static double doubleNumber (double n) {
 		double total = n * n;
 		return total;
+	}
+	
+	
+	public static String doubleNumber (String n) {
+		String error_message = "Cannot calculate strings.";
+		return error_message;
 	}
 	
 }
