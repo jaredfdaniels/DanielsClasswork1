@@ -5,11 +5,11 @@ public abstract class DanielsAnimal {
 	private int hunger_level;
 	
 	// Common Methods
-	private void sleep() {
+	public void sleep() {
 		System.out.println("The animal sleeps.");
 	}
 	
-	private void roam() {
+	public void roam() {
 		System.out.println("The animal is roaming");
 	}
 	
