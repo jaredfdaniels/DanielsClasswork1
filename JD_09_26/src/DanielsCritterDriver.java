@@ -1,4 +1,4 @@
-g
+
 public class DanielsCritterDriver {
 
 	public static void main(String[] args) {
