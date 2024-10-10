@@ -53,6 +53,7 @@ public class DanielsAddBook {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lbl_add_books = new JLabel("Add Books");
+		lbl_add_books.setForeground(new Color(0, 0, 128));
 		lbl_add_books.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
 		lbl_add_books.setBounds(170, 11, 96, 34);
 		frame.getContentPane().add(lbl_add_books);
@@ -117,8 +118,8 @@ public class DanielsAddBook {
 		frame.getContentPane().add(ta_added);
 		
 		JButton btn_add_book = new JButton("Add Book");
-		btn_add_book.setForeground(Color.DARK_GRAY);
-		btn_add_book.setBackground(Color.LIGHT_GRAY);
+		btn_add_book.setForeground(new Color(0, 0, 64));
+		btn_add_book.setBackground(new Color(192, 192, 192));
 		btn_add_book.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
 		btn_add_book.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
