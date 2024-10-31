@@ -1,0 +1,6 @@
+Abby         Anderson     95.00  A 
+Bob          Builder      100.00  A 
+Carly        Caterpillar  77.00  C 
+Dave         Dannon       82.00  B 
+Ella         East         85.00  B 
+Class Average: 87.8 B
