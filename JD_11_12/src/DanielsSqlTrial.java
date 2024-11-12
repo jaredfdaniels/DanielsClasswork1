@@ -11,7 +11,7 @@ public class DanielsSqlTrial {
 		Class.forName("com.mysql.cj.jdbc.Driver"); // Loads jdbc driver class
 		
 		Connection con=DriverManager.getConnection(
-				"jdbc:mysql://localhost:3307/tblbooks","root",""); // May need to be 3306, etc.
+				"jdbc:mysql://localhost:3306/tblbooks","root",""); // May need to be 3307, etc.
 
 		PreparedStatement statement=con.prepareStatement(
 				"Select * from tblbooks");
