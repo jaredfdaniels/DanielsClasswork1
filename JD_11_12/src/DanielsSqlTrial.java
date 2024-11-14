@@ -2,6 +2,7 @@ import java.sql.*;
 import java.sql.Connection;
 import java.util.Scanner;
 
+
 public class DanielsSqlTrial {
 
 	public static void main(String[] args) {
@@ -21,6 +22,8 @@ public class DanielsSqlTrial {
 		while (result.next()) {
 			System.out.println(result.getString(1)+"\t"+result.getString(3));
 		}
+		scanner.close();
 	}
 
 }
+                              
