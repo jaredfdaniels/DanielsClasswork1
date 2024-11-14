@@ -22,6 +22,11 @@ public class DanielsSqlTrial {
 		while (result.next()) {
 			System.out.println(result.getString(1)+"\t"+result.getString(3));
 		}
+		Statement stmt=null;
+		String sql;
+		stmt=con.createStatement();
+		sql="CREATE TABLE tblAuthors (authorID INTEGER not null, firstName VARCHAR(25), lastName VARCHAR(25), PRIMARY KEY (authorID))";
+		
 		scanner.close();
 	}
 
