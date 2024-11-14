@@ -1,3 +1,4 @@
+
 import java.sql.*;
 import java.sql.Connection;
 import java.util.Scanner;
@@ -12,10 +13,10 @@ public class DanielsSqlTrial {
 		Class.forName("com.mysql.cj.jdbc.Driver"); // Loads jdbc driver class
 		
 		Connection con=DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/tblbooks","root",""); // May need to be 3307, etc.
+				"jdbc:mysql://localhost:3306/tbl_books","root",""); // May need to be 3307, etc.
 
 		PreparedStatement statement=con.prepareStatement(
-				"Select * from tblbooks");
+				"Select * from tbl_books");
 		
 		ResultSet result=statement.executeQuery();
 		
@@ -26,6 +27,8 @@ public class DanielsSqlTrial {
 		String sql;
 		stmt=con.createStatement();
 		sql="CREATE TABLE tblAuthors (authorID INTEGER not null, firstName VARCHAR(25), lastName VARCHAR(25), PRIMARY KEY (authorID))";
+		stmt.executeUpdate(sql);
+		
 		
 		scanner.close();
 	}
