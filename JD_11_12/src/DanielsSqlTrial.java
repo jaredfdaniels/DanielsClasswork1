@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class DanielsSqlTrial {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		
@@ -34,4 +34,4 @@ public class DanielsSqlTrial {
 	}
 
 }
-                              
+              
