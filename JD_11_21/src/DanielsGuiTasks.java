@@ -44,24 +44,37 @@ public class DanielsGuiTasks {
 		frame.getContentPane().setLayout(null);
 		
 		JTextArea ta_result = new JTextArea();
-		ta_result.setBounds(33, 106, 175, 108);
+		ta_result.setBounds(46, 129, 347, 108);
 		frame.getContentPane().add(ta_result);	
 		
 		JComboBox cmb_1 = new JComboBox();
-		cmb_1.setBounds(267, 34, 126, 22);
+		cmb_1.setBounds(251, 34, 142, 22);
 		frame.getContentPane().add(cmb_1);
 		
 		JComboBox cmb_2 = new JComboBox();
-		cmb_2.setBounds(267, 84, 126, 22);
+		cmb_2.setBounds(331, 82, 62, 22);
 		frame.getContentPane().add(cmb_2);
 		
 		JButton btn_click_me = new JButton("Click me!");
-		btn_click_me.setBounds(33, 34, 89, 23);
+		btn_click_me.setFont(btn_click_me.getFont().deriveFont(20f));
+		btn_click_me.setBounds(46, 34, 194, 84);
 		frame.getContentPane().add(btn_click_me);
 		btn_click_me.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String [] pres = {"George Washington","Abraham Lincoln","Joe Biden"};
 				cmb_1.setModel(new DefaultComboBoxModel(pres));
+				String [] pres_2 = {"George Washington, 1800","Abraham Lincoln, 1900","Joe Biden, 2000"};
+				cmb_2.setModel(new DefaultComboBoxModel(pres_2));
+				String[] pres_3 = new String [pres_2.length];
+				for (int i=0;i<pres_2.length;i++) {
+					pres_3[i] = pres_2[i].split(",")[1];
+				}
+				cmb_2.setModel(new DefaultComboBoxModel(pres_3));
+				StringBuilder sb = new StringBuilder();
+				for (String item:pres_2) {
+					sb.append(item).append("\n");
+				}
+				ta_result.setText(sb.toString());
 			}
 		});
 	}
