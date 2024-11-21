@@ -54,6 +54,8 @@ public class DanielsGuiForm {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con=DriverManager.getConnection(
 				"jdbc:mysql://localhost:3306/tbl_authors","root","");
+		PreparedStatement statement=con.prepareStatement(
+				"Select * from tbl_authors");
 		
 		JLabel lbl_authors = new JLabel("Authors");
 		lbl_authors.setHorizontalAlignment(SwingConstants.CENTER);
@@ -101,6 +103,7 @@ public class DanielsGuiForm {
 		frame.getContentPane().add(btn_submit);
 		btn_submit.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e){
+					
 			}
 		});
 		
